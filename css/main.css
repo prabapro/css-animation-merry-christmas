@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    font-family: 'Pacifico', cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/page-bg.png") no-repeat center center/cover;
+}
+
+h1.animated {
+    font-size: 5rem;
+    text-align: center;
+    background: url("../img/text-bg.png");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveBg 90s linear infinite;
+    -webkit-animation: moveBg 90s linear infinite;
+}
+
+/* Text background animation */
+@keyframes moveBg {
+    0% {
+        background-position: 0% 30%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+    h1.animated {
+        font-size: 3rem;
+    }
+}
